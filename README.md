@@ -1,25 +1,16 @@
-# VCA Website — Sprint 1
+# VCA Website — Sprint 2
 
-Base institucional em Next.js 16, TypeScript e App Router.
+Segunda versão do site institucional da Visão Classe A.
 
-## Rodar localmente
+## Alterações desta sprint
 
-```bash
-npm install
-npm run dev
-```
+- Home premium completa
+- Telefone principal alterado para (51) 3276-4435
+- Acesso rápido para Vistoria Cautelar, Consulta Classe A e VCA Connect
+- Seções institucionais, diferenciais, tecnologia e indicadores
+- Melhorias de responsividade e acabamento visual
+- Next.js atualizado para versão segura
 
-## Publicar
+## Importante
 
-1. Envie todos os arquivos para o repositório `visaoclassea/vca-website`.
-2. Importe o repositório na Vercel.
-3. Mantenha o domínio oficial no Google Sites durante os testes.
-4. Use primeiro a URL temporária da Vercel.
-
-## Pix protegido
-
-Os arquivos originais estão preservados em `legacy-pix-backup/api/` e **não estão ativos nesta Sprint**. Não apague nem altere esses arquivos. A integração será feita em uma sprint específica após validação visual, mantendo os contratos atuais de API e as variáveis de ambiente.
-
-## VCA Connect
-
-O botão “Consultar laudo” aponta para `https://laudos.visaoclassea.com.br`.
+O backend Pix segue preservado em `legacy-pix-backup/api` e ainda não foi ativado nesta sprint.
