@@ -1,14 +1,8 @@
-# VCA Website — Sprint 3
+# VCA Website — Sprint 4
 
-Site institucional da Visão Classe A em Next.js.
+Página Consulta Classe A com checkout Pix integrado ao mesmo contrato de API do sistema original.
 
-## Entregas desta sprint
-- Página de Serviços completa
-- Escopos de Vistoria Cautelar, Pesquisa Veicular, Vistoria Completa e Car Hunter
-- Serviços para motos, vans, caminhões e veículos pesados
-- Seção para concessionárias, revendas, leilões, bancos e seguradoras
-- Explicação do processo de atendimento
-- Telefones padronizados: (51) 3276-4435 e (51) 99103-6561
+## Antes de testar pagamento na Vercel
+Copie para este projeto todas as variáveis de ambiente do projeto Pix atual. Não remova nem altere o projeto atual antes de validar geração, QR Code, copia e cola, status, webhook e planilha.
 
-## Pix
-A integração Pix continua preservada em `legacy-pix-backup/api` e ainda não foi ativada no novo frontend.
+O frontend usa `/api/create-pix` e `/api/check-status`. Opcionalmente, `NEXT_PUBLIC_PIX_API_BASE_URL` pode apontar temporariamente para o backend Pix atual durante os testes.
