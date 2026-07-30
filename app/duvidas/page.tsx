@@ -1,0 +1,1 @@
+import type { Metadata } from "next";import { PageTemplate } from "@/components/PageTemplate";export const metadata:Metadata={title:"Dúvidas"};export default function Page(){return <PageTemplate eyebrow="Perguntas frequentes" title="Tire suas dúvidas" description="Informações sobre serviços, laudos, atendimento, pagamento e prazos."/>}

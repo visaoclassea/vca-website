@@ -1,0 +1,1 @@
+import type { Metadata } from "next";import { PageTemplate } from "@/components/PageTemplate";export const metadata:Metadata={title:"Contato"};export default function Page(){return <PageTemplate eyebrow="Fale conosco" title="Estamos prontos para atender" description="Entre em contato para vistorias particulares, operações empresariais ou parcerias."/>}

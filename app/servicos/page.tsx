@@ -1,0 +1,1 @@
+import type { Metadata } from "next";import { PageTemplate } from "@/components/PageTemplate";export const metadata:Metadata={title:"Serviços"};export default function Page(){return <PageTemplate eyebrow="Serviços" title="Inspeção veicular para cada necessidade" description="Soluções técnicas para veículos leves, motos, vans, caminhões e operações corporativas."/>}

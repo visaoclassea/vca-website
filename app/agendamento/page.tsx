@@ -1,0 +1,1 @@
+import type { Metadata } from "next";import { PageTemplate } from "@/components/PageTemplate";export const metadata:Metadata={title:"Agendamento"};export default function Page(){return <PageTemplate eyebrow="Atendimento" title="Agende sua vistoria" description="Escolha o serviço e fale com nossa equipe para confirmar local, data e horário."/>}

@@ -1,0 +1,1 @@
+import type { Metadata } from "next";import { PageTemplate } from "@/components/PageTemplate";export const metadata:Metadata={title:"Consulta Classe A"};export default function Page(){return <PageTemplate eyebrow="Pesquisa veicular" title="Consulta Classe A" description="A página de planos e pagamento Pix será integrada aqui sem alterar a lógica atual das APIs."/>}

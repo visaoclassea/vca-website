@@ -1,0 +1,1 @@
+import type { Metadata } from "next";import { PageTemplate } from "@/components/PageTemplate";export const metadata:Metadata={title:"Sobre nós"};export default function Page(){return <PageTemplate eyebrow="Visão Classe A" title="Experiência técnica e tecnologia própria" description="Uma empresa de inspeção veicular criada para entregar segurança, transparência e escala."/>}
