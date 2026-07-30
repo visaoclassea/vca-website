@@ -34,11 +34,11 @@ function getValorServico(servico, tipoCliente) {
   // Cliente normal (site público)
   switch (servico) {
     case 'Consulta Classe A Plus':
-      return 4990;
+      return 100;
     case 'Consulta Classe A Gold':
-      return 5790;
+      return 100;
     case 'Consulta Classe A Completa':
-      return 6490;
+      return 100;
     default:
       return 0;
   }
