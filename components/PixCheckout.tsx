@@ -101,7 +101,8 @@ export default function PixCheckout() {
       setPix(data);
       if (intervalRef.current) clearInterval(intervalRef.current);
       if (data.txid) {
-        intervalRef.current = setInterval(() => checkStatus(data.txid!), 8000);
+        void checkStatus(data.txid);
+        intervalRef.current = setInterval(() => checkStatus(data.txid!), 5000);
       }
     } catch (submitError) {
       const message = submitError instanceof Error ? submitError.message : "Erro inesperado ao gerar o pagamento.";
