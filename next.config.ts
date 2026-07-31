@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
-  async rewrites() {
+  async redirects() {
     return [
       {
         source: "/",
@@ -13,7 +13,9 @@ const nextConfig: NextConfig = {
             value: "consulta.visaoclassea.com.br",
           },
         ],
-        destination: "/consulta-classe-a",
+        destination:
+          "https://consulta.visaoclassea.com.br/consulta-classe-a",
+        permanent: true,
       },
     ];
   },
