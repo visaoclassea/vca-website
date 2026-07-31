@@ -1,39 +1,106 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { FileSearch, Menu, Phone } from "lucide-react";
+import { useState } from "react";
+import { Menu, Phone, X } from "lucide-react";
+import styles from "./Header.module.css";
 
-export function Header(){
-  return <>
-    <div className="topbar">
-      <div className="container topbar-inner">
-        <span>Porto Alegre e atendimento em todo o Rio Grande do Sul</span>
-        <span className="topbar-contacts">
-          <a href="tel:+555132764435"><Phone size={13}/> (51) 3276-4435</a>
-          <span>·</span>
-          <a href="tel:+5551991036561">(51) 99103-6561</a>
-          <span>·</span>
-          <a href="mailto:contato@visaoclassea.com.br">contato@visaoclassea.com.br</a>
-        </span>
+const links = [
+  { href: "/", label: "Início" },
+  { href: "/servicos", label: "Serviços" },
+  { href: "/empresas", label: "Empresas" },
+  { href: "/consulta-classe-a", label: "Consulta Classe A" },
+  { href: "/agendamento", label: "Agendamento" },
+  { href: "/sobre", label: "Sobre" },
+  { href: "/duvidas", label: "Dúvidas" },
+];
+
+export function Header() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className={styles.header}>
+      <div className={styles.topbar}>
+        <div className={styles.container}>
+          <span>Porto Alegre e atendimento nas principais cidades do RS</span>
+          <div className={styles.topContacts}>
+            <a href="tel:+555132764435">(51) 3276-4435</a>
+            <a href="tel:+5551991036561">(51) 99103-6561</a>
+            <a href="mailto:contato@visaoclassea.com.br">
+              contato@visaoclassea.com.br
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-    <header className="header">
-      <div className="container header-inner">
-        <Link href="/" aria-label="Página inicial">
-          <Image className="logo" src="/logo.png" alt="Visão Classe A" width={220} height={80} priority />
-        </Link>
-        <nav className="nav" aria-label="Navegação principal">
-          <Link href="/">Início</Link>
-          <Link href="/servicos">Serviços</Link>
-          <Link href="/consulta-classe-a">Consulta Classe A</Link>
-          <Link href="/agendamento">Agendamento</Link>
-          <Link href="/sobre">Sobre</Link>
-          <Link href="/duvidas">Dúvidas</Link>
-        </nav>
-        <a className="btn btn-primary header-cta" href="https://laudos.visaoclassea.com.br">
-          <FileSearch size={18}/> Consultar laudo
-        </a>
-        <span className="mobile-menu-icon" aria-hidden="true"><Menu size={25}/></span>
+
+      <div className={styles.navbar}>
+        <div className={styles.container}>
+          <Link href="/" className={styles.logo} onClick={() => setOpen(false)}>
+            <Image
+              src="/images/logo.png"
+              alt="Visão Classe A"
+              width={760}
+              height={210}
+              priority
+            />
+          </Link>
+
+          <nav className={styles.desktopNav} aria-label="Navegação principal">
+            {links.map((link) => (
+              <Link key={link.href} href={link.href}>
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          <a
+            className={styles.whatsappButton}
+            href="https://wa.me/5551991036561"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Phone size={18} />
+            <span>WhatsApp</span>
+          </a>
+
+          <button
+            className={styles.menuButton}
+            type="button"
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? <X size={25} /> : <Menu size={25} />}
+          </button>
+        </div>
       </div>
+
+      {open && (
+        <div className={styles.mobileMenu}>
+          <nav aria-label="Navegação móvel">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <a
+              href="https://wa.me/5551991036561"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.mobileWhatsapp}
+              onClick={() => setOpen(false)}
+            >
+              <Phone size={18} />
+              Falar pelo WhatsApp
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
-  </>
+  );
 }

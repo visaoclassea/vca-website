@@ -1,0 +1,386 @@
+.page {
+  --red: #d71920;
+  --red-dark: #ad1117;
+  --ink: #111318;
+  --muted: #667085;
+  --line: #e4e7ec;
+  --soft: #f5f6f8;
+  color: var(--ink);
+  background: #fff;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 105px 0;
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(215, 25, 32, .36), transparent 31%),
+    linear-gradient(135deg, #101216, #1e232c);
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: #ffb3b7;
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 800px;
+  margin: 0;
+  font-size: clamp(2.45rem, 5vw, 4.7rem);
+  line-height: 1;
+  letter-spacing: -.05em;
+  text-wrap: balance;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 25px 0 0;
+  color: rgba(255, 255, 255, .72);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.heroBenefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.heroBenefits span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, .84);
+  font-size: .92rem;
+  font-weight: 750;
+}
+
+.heroBenefits svg {
+  color: #ff7278;
+}
+
+.heroCard {
+  padding: 36px;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .07);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .18);
+  backdrop-filter: blur(12px);
+}
+
+.heroCard svg {
+  color: #ff747a;
+}
+
+.heroCard strong {
+  display: block;
+  margin: 27px 0 12px;
+  font-size: 1.45rem;
+}
+
+.heroCard p {
+  margin: 0;
+  font-size: .98rem;
+}
+
+.formSection {
+  padding: 100px 0;
+  background: var(--soft);
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: 1.12fr .88fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.formCard,
+.infoCard,
+.contactCard {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 16px 44px rgba(16, 24, 40, .06);
+}
+
+.formCard {
+  padding: 36px;
+}
+
+.formTitle > span {
+  color: var(--red);
+  font-size: .77rem;
+  font-weight: 850;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.formTitle h2 {
+  margin: 12px 0 8px;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  letter-spacing: -.04em;
+}
+
+.formTitle p {
+  margin: 0 0 30px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.field label {
+  font-size: .88rem;
+  font-weight: 800;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid #d0d5dd;
+  border-radius: 11px;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.field input,
+.field select {
+  min-height: 52px;
+  padding: 0 15px;
+}
+
+.field textarea {
+  padding: 14px 15px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 4px rgba(215, 25, 32, .09);
+}
+
+.plateInput {
+  text-transform: uppercase;
+  font-weight: 850;
+  letter-spacing: .08em;
+}
+
+.optionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.optionGrid button {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 15px;
+  border: 1px solid #d0d5dd;
+  border-radius: 12px;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+  font-weight: 750;
+  text-align: left;
+  cursor: pointer;
+}
+
+.optionGrid button svg {
+  flex: 0 0 auto;
+  color: var(--red);
+}
+
+.optionGrid .optionSelected {
+  border: 2px solid var(--red);
+  background: #fff7f7;
+}
+
+.errorBox {
+  margin-top: 3px;
+  padding: 13px 15px;
+  border: 1px solid #f3b7ba;
+  border-radius: 10px;
+  color: #9f1218;
+  background: #fff0f1;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.submitButton {
+  width: 100%;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 22px;
+  border: 0;
+  border-radius: 11px;
+  color: #fff;
+  background: var(--red);
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  background: var(--red-dark);
+}
+
+.infoColumn {
+  display: grid;
+  gap: 20px;
+}
+
+.infoCard,
+.contactCard {
+  padding: 30px;
+}
+
+.infoCard > svg,
+.contactCard > svg {
+  color: var(--red);
+}
+
+.infoCard h3,
+.contactCard h3 {
+  margin: 20px 0 10px;
+  font-size: 1.35rem;
+}
+
+.infoCard ol {
+  display: grid;
+  gap: 14px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.infoCard li {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.infoCard li strong {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: var(--red);
+  background: #fff0f1;
+}
+
+.infoCard li span {
+  padding-top: 7px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.contactCard {
+  color: #fff;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(215, 25, 32, .35), transparent 35%),
+    #111318;
+}
+
+.contactCard > svg {
+  color: #ff747a;
+}
+
+.contactCard p {
+  color: rgba(255, 255, 255, .68);
+  line-height: 1.65;
+}
+
+.contactCard a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: #fff;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+@media (max-width: 940px) {
+  .heroGrid,
+  .bookingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCard {
+    max-width: 690px;
+  }
+}
+
+@media (max-width: 620px) {
+  .container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .hero,
+  .formSection {
+    padding: 76px 0;
+  }
+
+  .heroBenefits {
+    flex-direction: column;
+  }
+
+  .formCard,
+  .infoCard,
+  .contactCard {
+    padding: 25px 20px;
+  }
+
+  .row,
+  .optionGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .optionGrid {
+    gap: 10px;
+  }
+}

@@ -1,0 +1,26 @@
+// Adicione ao metadata do app/layout.tsx
+
+export const metadata = {
+  metadataBase: new URL("https://www.visaoclassea.com.br"),
+  title:{
+    default:"Visão Classe A",
+    template:"%s | Visão Classe A"
+  },
+  description:"Vistoria cautelar, pesquisa veicular e soluções para concessionárias e empresas.",
+  keywords:[
+    "vistoria cautelar",
+    "pesquisa veicular",
+    "porto alegre",
+    "vistoria veicular",
+    "laudo cautelar"
+  ],
+  openGraph:{
+    title:"Visão Classe A",
+    description:"Tecnologia e engenharia aplicadas à inspeção veicular.",
+    images:["/images/hero.png"]
+  },
+  robots:{
+    index:true,
+    follow:true
+  }
+}

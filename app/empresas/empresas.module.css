@@ -1,0 +1,306 @@
+.page {
+  --red: #d71920;
+  --red-dark: #ac1117;
+  --ink: #111318;
+  --muted: #667085;
+  --soft: #f5f6f8;
+  color: var(--ink);
+  background: #fff;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 120px 0 110px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(215,25,32,.38), transparent 30%),
+    linear-gradient(135deg, #111318, #1c2028);
+}
+
+.hero .container {
+  max-width: 1180px;
+}
+
+.eyebrow,
+.eyebrowLight,
+.eyebrowDark {
+  display: inline-flex;
+  margin-bottom: 18px;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.eyebrow,
+.eyebrowLight {
+  color: #ffb4b7;
+}
+
+.eyebrowDark {
+  color: var(--red);
+}
+
+.hero h1 {
+  max-width: 880px;
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  line-height: .98;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 28px 0 0;
+  color: rgba(255,255,255,.75);
+  font-size: 1.16rem;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 22px;
+  border-radius: 10px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.primaryButton {
+  color: #fff;
+  background: var(--red);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  background: var(--red-dark);
+}
+
+.secondaryButton {
+  color: var(--ink);
+  background: #fff;
+}
+
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.section,
+.softSection,
+.flowSection,
+.ctaSection {
+  padding: 105px 0;
+}
+
+.softSection {
+  background: var(--soft);
+}
+
+.introGrid,
+.flowGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.introGrid h2,
+.heading h2,
+.flowGrid h2,
+.cta h2 {
+  margin: 0;
+  font-size: clamp(2.1rem, 4vw, 3.7rem);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+
+.segmentList {
+  display: grid;
+  gap: 15px;
+}
+
+.segmentList div {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e4e7ec;
+  font-weight: 750;
+}
+
+.segmentList svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: var(--red);
+}
+
+.heading {
+  max-width: 760px;
+  margin-bottom: 46px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cards article {
+  min-height: 250px;
+  padding: 28px;
+  border: 1px solid #e4e7ec;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(16,24,40,.05);
+}
+
+.iconBox {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  color: #fff;
+  background: var(--red);
+}
+
+.cards h3 {
+  margin: 22px 0 10px;
+  font-size: 1.2rem;
+}
+
+.cards p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.flowSection {
+  color: #fff;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(215,25,32,.30), transparent 32%),
+    #111318;
+}
+
+.flowGrid p {
+  margin: 20px 0 0;
+  color: rgba(255,255,255,.68);
+  line-height: 1.75;
+}
+
+.steps {
+  display: grid;
+}
+
+.steps div {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  align-items: center;
+  gap: 18px;
+  min-height: 88px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.steps strong {
+  color: #ff686e;
+  font-size: 1.5rem;
+}
+
+.steps span {
+  font-weight: 750;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 42px;
+  padding: 54px;
+  border-radius: 24px;
+  background:
+    linear-gradient(120deg, rgba(215,25,32,.10), transparent 55%),
+    var(--soft);
+}
+
+.cta > div {
+  max-width: 760px;
+}
+
+.cta svg {
+  margin-bottom: 18px;
+  color: var(--red);
+}
+
+.cta p {
+  margin: 18px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .introGrid,
+  .flowGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 620px) {
+  .container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .hero {
+    padding: 90px 0 80px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .section,
+  .softSection,
+  .flowSection,
+  .ctaSection {
+    padding: 76px 0;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    padding: 34px 24px;
+  }
+}
