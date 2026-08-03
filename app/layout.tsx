@@ -10,22 +10,42 @@ export const metadata: Metadata = {
     default: "Visão Classe A | Inspeções Veiculares",
     template: "%s | Visão Classe A",
   },
-  description: "Vistoria cautelar, pesquisa veicular e soluções para concessionárias, lojistas e particulares no Rio Grande do Sul.",
+  description:
+    "Vistoria cautelar, pesquisa veicular e soluções para concessionárias, lojistas e particulares no Rio Grande do Sul.",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="pt-BR">
       <body>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17520452776" strategy="afterInteractive" />
-        <Script id="google-ads" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17520452776');`}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17520452776"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-tags" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'AW-17520452776');
+            gtag('config', 'G-WLRFRDM1RE');
+          `}
         </Script>
+
         <Header />
+
         {children}
+
         <Footer />
       </body>
     </html>
