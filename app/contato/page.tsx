@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 const mapsUrl =
-  "https://www.google.com/maps/search/?api=1&query=Rua+Joaquim+Silveira+1136+São+Sebastião+Porto+Alegre+RS";
+  "https://www.google.com/maps/dir/?api=1&destination=Rua+Joaquim+Silveira%2C+1136%2C+S%C3%A3o+Sebasti%C3%A3o%2C+Porto+Alegre%2C+RS%2C+91060-320";
 
 const mapsEmbedUrl =
   "https://www.google.com/maps?q=Rua%20Joaquim%20Silveira%2C%201136%2C%20S%C3%A3o%20Sebasti%C3%A3o%2C%20Porto%20Alegre%2C%20RS&output=embed";
@@ -115,7 +115,7 @@ export default function Contato() {
               <a
                 href={mapsUrl}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className={styles.directionsButton}
               >
                 <MapPin size={19} />
