@@ -13,6 +13,7 @@ const links = [
   { href: "/consulta-classe-a", label: "Consulta Classe A" },
   { href: "/agendamento", label: "Agendamento" },
   { href: "/sobre", label: "Sobre" },
+  { href: "/contato", label: "Contato" },
   { href: "/duvidas", label: "Dúvidas" },
 ];
 
